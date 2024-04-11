@@ -223,10 +223,8 @@ const loginAdminController = async (req, res) => {
     res.status(200).send({
       success: true,
       message: "login successfully",
-      user: {
-        _id: user._id,
-        user,
-      },
+      user,
+      _id: user._id,
       token,
       role: user.role,
     });
