@@ -131,10 +131,10 @@ const loginController = async (req, res) => {
     // Send successful login response with token and user details
     res.status(200).send({
       success: true,
-      message: "Login successful",
-      username: user.username, // Changed 'rollNumber' to 'username'
-      token,
+      message: "login successfully",
+      user,
       _id: user._id,
+      token,
       role: user.role,
     });
   } catch (error) {
